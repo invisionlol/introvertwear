@@ -141,7 +141,7 @@ export default function ProductsPage() {
   }
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-4 md:p-8 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -154,7 +154,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Table */}
-      <div className="border border-border">
+      <div className="border border-border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

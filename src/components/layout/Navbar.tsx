@@ -29,10 +29,8 @@ export function Navbar({ categories }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-sm border-b border-border"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/90 backdrop-blur-sm ${
+        scrolled ? "border-b border-border" : "border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">

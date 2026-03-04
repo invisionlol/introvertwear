@@ -97,7 +97,7 @@ export default function CategoriesPage() {
   }
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-4 md:p-8 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-semibold tracking-tight">Categories</h1>
@@ -108,7 +108,7 @@ export default function CategoriesPage() {
         </Button>
       </div>
 
-      <div className="border border-border">
+      <div className="border border-border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

@@ -120,7 +120,7 @@ export default function CampaignsPage() {
   }
 
   return (
-    <div className="p-8 space-y-6">
+    <div className="p-4 md:p-8 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-semibold tracking-tight">Campaigns</h1>
@@ -131,7 +131,7 @@ export default function CampaignsPage() {
         </Button>
       </div>
 
-      <div className="border border-border">
+      <div className="border border-border overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>

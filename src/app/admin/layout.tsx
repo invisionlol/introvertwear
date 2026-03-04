@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { Package, Tag, Megaphone, ExternalLink, LogOut } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
+import { MobileNav } from "@/components/admin/MobileNav";
 
 async function AdminSidebar() {
   const nav = [
@@ -12,7 +13,7 @@ async function AdminSidebar() {
   ];
 
   return (
-    <aside className="w-56 shrink-0 min-h-screen bg-sidebar text-sidebar-foreground flex flex-col border-r border-sidebar-border">
+    <aside className="hidden md:flex w-56 shrink-0 min-h-screen bg-sidebar text-sidebar-foreground flex-col border-r border-sidebar-border">
       {/* Brand */}
       <div className="px-6 py-7 border-b border-sidebar-border">
         <p className="text-[10px] tracking-[0.3em] text-sidebar-foreground/40 uppercase mb-0.5">
@@ -68,9 +69,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="flex min-h-screen">
       <AdminSidebar />
-      <main className="flex-1 bg-card overflow-auto">
-        {children}
-      </main>
+      <div className="flex-1 flex flex-col min-w-0">
+        <MobileNav />
+        <main className="flex-1 bg-card overflow-auto">
+          {children}
+        </main>
+      </div>
       <Toaster position="bottom-right" />
     </div>
   );

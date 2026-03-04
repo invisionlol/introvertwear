@@ -65,6 +65,7 @@ export function CartDrawer() {
     <Sheet open={isOpen} onOpenChange={handleOpenChange}>
       <SheetContent
         side="right"
+        showCloseButton={false}
         className="w-full sm:max-w-[420px] flex flex-col p-0 gap-0"
       >
         {/* Header */}
